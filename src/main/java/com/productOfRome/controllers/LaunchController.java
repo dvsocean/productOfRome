@@ -10,4 +10,9 @@ public class LaunchController {
     public String getWelcome(){
         return "welcome";
     }
+
+    @RequestMapping("/selection")
+    public String getInputPage(){
+        return "selection";
+    }
 }
