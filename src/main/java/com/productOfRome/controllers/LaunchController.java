@@ -1,18 +1,20 @@
 package com.productOfRome.controllers;
 
-import org.springframework.stereotype.Controller;
+import com.productOfRome.dataobjects.Node;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+import java.awt.*;
+
+@RestController
 public class LaunchController {
 
-    @RequestMapping("/")
-    public String getWelcome(){
-        return "welcome";
-    }
-
-    @RequestMapping("/selection")
-    public String getInputPage(){
-        return "selection";
+    //@PostMapping("/updateFormData")
+    @RequestMapping(value = "/updateFormData", method = RequestMethod.POST, headers = "Content-Type=application/x-www-form-urlencoded;charset=UTF-8", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+    public String informedDecision(@RequestBody Node node){
+        return node.getActivity();
     }
 }
