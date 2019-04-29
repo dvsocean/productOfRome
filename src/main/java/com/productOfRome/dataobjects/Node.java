@@ -1,6 +1,10 @@
 package com.productOfRome.dataobjects;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Node {
+
+    public Node() {}
 
     public Node(int numberOfDays, String activity) {
         this.numberOfDays = numberOfDays;
