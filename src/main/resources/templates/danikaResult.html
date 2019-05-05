@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>DanikaResult</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>DanikaResult</h1>
+<p th:text="'number of days: ' + ${node.numberOfDays}" />
+<p th:text="'activity: ' + ${node.activity}" />
+<a href="/selection">Submit another message</a>
+</body>
+</html>
