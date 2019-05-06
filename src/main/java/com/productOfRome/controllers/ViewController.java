@@ -14,7 +14,7 @@ public class ViewController {
 
     @RequestMapping("/")
     public String getWelcome(){
-        return "welcome";
+        return "index";
     }
 
     @RequestMapping("/selection")
